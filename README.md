@@ -6,14 +6,12 @@ This project consists of implement of V-Tree, which designed to support kNN sear
 [METIS] is required before you run the program.it is used to partition the graph.
 Thus, before compile our code, you must install METIS in your linux system.
 METIS link & download: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
-
     ```
     get metics from
     http://glaros.dtc.umn.edu/gkhome/metis/metis/download
     ```
     
 ##[Example of Install METIS]
-
     ```
     wget http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.1.0.tar.gz
     gunzip metis-5.x.y.tar.gz
@@ -58,7 +56,6 @@ Some annotations were written among the code.
 -------------------------------------------
 The edge file is consist of two pars. First line is the overall information of the
  graph. The other line is the detail edge information.
-
     ```
     1089933 2545844    //The first line of the input file shows the number of vertices and edges.
     0 1 655            //The first row is the origin, the second row is destination, the third row is the weight of the edge.

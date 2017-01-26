@@ -1,0 +1,167 @@
+In file included from hiernn_gptree_dif_dist_test.cc:34:0:
+graphsearch.h: 在构造函数‘GraphSearchResult::GraphSearchResult(int, float)’中:
+graphsearch.h:27:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+graphsearch.h: 在构造函数‘GraphSearchResult::GraphSearchResult(int, const Collection::Array&, float)’中:
+graphsearch.h:32:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+graphsearch.h: 在构造函数‘GraphSearchResult::GraphSearchResult(int, float, float)’中:
+graphsearch.h:37:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+graphsearch.h: 在构造函数‘GraphSearchResult::GraphSearchResult(int, const Collection::Array&, float, float)’中:
+graphsearch.h:42:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+In file included from hierobjsearch.h:13:0,
+                 from hiernn_gptree_dif_dist_test.cc:35:
+objectsearch.h: 在构造函数‘ObjectSearchResult::ObjectSearchResult(int, float)’中:
+objectsearch.h:29:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+objectsearch.h: 在构造函数‘ObjectSearchResult::ObjectSearchResult(int, const Collection::Array&, float)’中:
+objectsearch.h:32:32: 警告：将一个整数转换为大小不同的指针 [-Wint-to-pointer-cast]
+         { m_path.append((void*)m_nid); };
+                                ^
+hiernn_gptree_dif_dist_test.cc: 在全局域：
+hiernn_gptree_dif_dist_test.cc:48:1: 错误：‘define’不是一个类型名
+ define N 100
+ ^
+hiernn_gptree_dif_dist_test.cc: 在函数‘void helpmsg(const char*)’中:
+hiernn_gptree_dif_dist_test.cc:71:5: 错误：‘cerr’在此作用域中尚未声明
+     cerr << "Suggested arguments for GPtree test road:" << endl;
+     ^
+hiernn_gptree_dif_dist_test.cc:71:5: 附注：建议的替代：
+In file included from bordernode.h:16:0,
+                 from hiernn_gptree_dif_dist_test.cc:27:
+/usr/local/include/c++/5.2.0/iostream:62:18: 附注：  ‘std::cerr’
+   extern ostream cerr;  /// Linked to standard error (unbuffered)
+                  ^
+hiernn_gptree_dif_dist_test.cc:71:60: 错误：‘endl’在此作用域中尚未声明
+     cerr << "Suggested arguments for GPtree test road:" << endl;
+                                                            ^
+hiernn_gptree_dif_dist_test.cc:71:60: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/iostream:39:0,
+                 from bordernode.h:16,
+                 from hiernn_gptree_dif_dist_test.cc:27:
+/usr/local/include/c++/5.2.0/ostream:590:5: 附注：  ‘std::endl’
+     endl(basic_ostream<_CharT, _Traits>& __os)
+     ^
+hiernn_gptree_dif_dist_test.cc: 在全局域：
+hiernn_gptree_dif_dist_test.cc:83:20: 错误：变量或字段‘load_distance’声明为 void
+ void load_distance(string file_name, int N,
+                    ^
+hiernn_gptree_dif_dist_test.cc:83:20: 错误：‘string’在此作用域中尚未声明
+hiernn_gptree_dif_dist_test.cc:83:20: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/iosfwd:39:0,
+                 from /usr/local/include/c++/5.2.0/ios:38,
+                 from /usr/local/include/c++/5.2.0/ostream:38,
+                 from /usr/local/include/c++/5.2.0/iostream:39,
+                 from bordernode.h:16,
+                 from hiernn_gptree_dif_dist_test.cc:27:
+/usr/local/include/c++/5.2.0/bits/stringfwd.h:74:33: 附注：  ‘std::__cxx11::string’
+   typedef basic_string<char>    string;   
+                                 ^
+/usr/local/include/c++/5.2.0/bits/stringfwd.h:74:33: 附注：  ‘std::__cxx11::string’
+hiernn_gptree_dif_dist_test.cc:83:38: 错误：expected primary-expression before ‘int’
+ void load_distance(string file_name, int N,
+                                      ^
+hiernn_gptree_dif_dist_test.cc:84:2: 错误：‘vector’在此作用域中尚未声明
+  vector <int> &que_pos,
+  ^
+hiernn_gptree_dif_dist_test.cc:84:2: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:84:10: 错误：expected primary-expression before ‘int’
+  vector <int> &que_pos,
+          ^
+hiernn_gptree_dif_dist_test.cc:85:2: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> > &near,
+  ^
+hiernn_gptree_dif_dist_test.cc:85:2: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:85:10: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> > &near,
+          ^
+hiernn_gptree_dif_dist_test.cc:85:10: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:85:18: 错误：expected primary-expression before ‘int’
+  vector <vector <int> > &near,
+                  ^
+hiernn_gptree_dif_dist_test.cc:86:2: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&far,
+  ^
+hiernn_gptree_dif_dist_test.cc:86:2: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:86:10: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&far,
+          ^
+hiernn_gptree_dif_dist_test.cc:86:10: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:86:18: 错误：expected primary-expression before ‘int’
+  vector <vector <int> >&far,
+                  ^
+hiernn_gptree_dif_dist_test.cc:87:2: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&farther,
+  ^
+hiernn_gptree_dif_dist_test.cc:87:2: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:87:10: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&farther,
+          ^
+hiernn_gptree_dif_dist_test.cc:87:10: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:87:18: 错误：expected primary-expression before ‘int’
+  vector <vector <int> >&farther,
+                  ^
+hiernn_gptree_dif_dist_test.cc:88:2: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&farthest) {
+  ^
+hiernn_gptree_dif_dist_test.cc:88:2: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:88:10: 错误：‘vector’在此作用域中尚未声明
+  vector <vector <int> >&farthest) {
+          ^
+hiernn_gptree_dif_dist_test.cc:88:10: 附注：建议的替代：
+In file included from /usr/local/include/c++/5.2.0/vector:64:0,
+                 from hiernn_gptree_dif_dist_test.cc:45:
+/usr/local/include/c++/5.2.0/bits/stl_vector.h:214:11: 附注：  ‘std::vector’
+     class vector : protected _Vector_base<_Tp, _Alloc>
+           ^
+hiernn_gptree_dif_dist_test.cc:88:18: 错误：expected primary-expression before ‘int’
+  vector <vector <int> >&farthest) {
+                  ^
+make: *** [hiernn_gptree_dif_dist_test.o] 错误 1

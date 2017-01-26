@@ -30,11 +30,12 @@ Simple build the file is make.
 
     
     make 
-    ./vtree 
+     
     
 The manual compile is :
     ```
-    g++ -O3 vtree.cpp -o vtree -lmetis
+    g++  -O3 vtree_build.cpp  -lmetis -o vtree_build
+    g++  -O3 vtree_knn_demo.cpp -lmetis -o vtree_knn_demo
     ```
 
 Beware the linking issue, in our case, we use "g++ ... -lmetis"
@@ -44,15 +45,20 @@ Make sure "metis.h" is in your default include(.h) directory.
 #[Usage]
 --------------------------------------------
 1.Build a vtree index.
-./vtree build_and_save ./input_edge_file ./output_file
+./vtree_build ./input_edge_file ./output_file
 2.Load VTree and run KNN test use 
-./vtree load_and_run ./VTree_file $K(int) $car_percent(int) $change_percent(int)'
+./vtree_knn_demo  ./VTree_file $K(int) $car_percent(int) $change_percent(int) $query_per_update'
  k means the number of k neighborhoods 
  `car_percent` is the number of running vehicles on the road network
  `change_percent` means the percent of vehicles change to the other vertex between each query.
+ `query_per_update` means the query number in between two updates 
 
 Some annotations were written among the code.
 
+####[Example]
+
+    ./vtree_build NW.vedge NW.vtree
+    ./vtree_knn_demo NW.vtree 10 0.01 0.002 6
 
 ##[Input file format]
 -------------------------------------------
@@ -61,11 +67,7 @@ The edge file is consist of two pars. First line is the overall information of t
     
 
     1089933 2545844    //The first line of the input file shows the number of vertices and edges.
-    0 1 655            //The first row is the origin, the second row is destination, the third row is the weight of the edge.
-    0 80 1393
-    0 81 1426
-    1 0 655
-    1 2 1157
+    1 2 1157            //The first row is the origin, the second row is destination, the third row is the weight of the edge.
     1 6 5413
     2 1 1157
     2 3 2394
@@ -91,8 +93,10 @@ NWFIX                // if the number of edge starts from 0 Set `NWFIX = true`, 
 
 For better understanding of our code, we provide example(New York Road Network dataset)
 File use: (Note the file input format)
-        nw.edge (graph edge file)
+        NW.vedge (graph edge file)
+simple run is run 
 
+    bash run_demo.sh
 
 # Licence
 

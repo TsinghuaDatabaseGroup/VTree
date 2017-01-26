@@ -6,13 +6,15 @@ This project consists of implement of V-Tree, which designed to support kNN sear
 [METIS] is required before you run the program.it is used to partition the graph.
 Thus, before compile our code, you must install METIS in your linux system.
 METIS link & download: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
-    ```
+
+    
     get metics from
     http://glaros.dtc.umn.edu/gkhome/metis/metis/download
-    ```
+    
     
 ##[Example of Install METIS]
-    ```
+ 
+
     wget http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-5.1.0.tar.gz
     gunzip metis-5.x.y.tar.gz
     tar -xvf metis-5.x.y.tar
@@ -20,16 +22,16 @@ METIS link & download: http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
     make config
     make
     make install
-    ```
+    
 
 #[Compile]
 --------------------------------------------
 Simple build the file is make.
 
-    ```
+    
     make 
     ./vtree 
-    ```
+    
 The manual compile is :
     ```
     g++ -O3 vtree.cpp -o vtree -lmetis
@@ -56,7 +58,8 @@ Some annotations were written among the code.
 -------------------------------------------
 The edge file is consist of two pars. First line is the overall information of the
  graph. The other line is the detail edge information.
-    ```
+    
+
     1089933 2545844    //The first line of the input file shows the number of vertices and edges.
     0 1 655            //The first row is the origin, the second row is destination, the third row is the weight of the edge.
     0 80 1393
@@ -68,7 +71,7 @@ The edge file is consist of two pars. First line is the overall information of t
     2 3 2394
     2 7 3857
     ...
-    ```
+    
 The VTree input is directed graph. If an undirected graph is used, it also support that. 
 !The parameter RevE needs to be true when the undirected graph is used.
 !If the number of graph is not 
@@ -79,7 +82,9 @@ Hence, it is suggested you have to pre-process the input road network for your o
 ##[Some useful parameter of the source code]
 -----
 Partition_Part       // the fanout of the vtree
+
 Naive_Split_Limit    // the max number of the leaf node, which is τ+1 in the article.
+
 NWFIX                // if the number of edge starts from 0 Set `NWFIX = true`, otherwise set it to false.
 
 -----

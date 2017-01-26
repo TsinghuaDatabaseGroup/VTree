@@ -91,7 +91,7 @@ NWFIX                // if the number of edge starts from 0 Set `NWFIX = true`, 
 
 -----
 
-For better understanding of our code, we provide example(New York Road Network dataset)
+For better understanding of our code, we provide example(Northwest USA Road Network dataset)
 File use: (Note the file input format)
         NW.vedge (graph edge file)
 simple run is run 
